@@ -1,0 +1,51 @@
+package zadachi;
+import java.util.Scanner;
+public class podgotovkaizpit {
+
+	public static void input(int[] arr) {
+		 Scanner inp= new Scanner(System.in);
+		 int sum=0;
+		 for(int i=0;i<arr.length;i++) {
+		 System.out.print("Въведете член №"+i+" : ");
+		 arr[i]=inp.nextInt();
+		 }
+		 
+	}
+		 public static void output(int[] arr) {
+		 Scanner inp= new Scanner(System.in);
+		 int sum=0;
+		 for(int i=0;i<arr.length;i++) {
+		 System.out.println("Член №"+i+" е "+arr[i]);
+	}
+		 
+		 }
+		 public static void sum(int[] arr) {
+			 int sum=0;
+			 for(int i=0;i<arr.length;i++) {
+			 if(arr[i]<=0)sum=sum+arr[i];
+			 else break;
+			 }
+			 System.out.println("Сумата на елементите преди първия неотрицателен елемент : "+sum);}
+		 public static void sort(int[] arr) {
+		        for(int i=0;i<arr.length-1;i++)
+		            for(int j=0;j<arr.length-i-1;j++)
+		                if(arr[j]>arr[j+1]) {
+		                    int temp=arr[j];
+		                    arr[j]=arr[j+1];
+		                    arr[j+1]=temp;}
+		        for (int i=0;i<arr.length;i++)
+		            System.out.print(arr[i] + " ");
+		        System.out.println();
+		 }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner inp =new Scanner(System.in);
+int n=inp.nextInt();
+int[]arr =new int[n];
+input(arr);
+output(arr);
+sum(arr);
+sort(arr);
+	}
+
+}
